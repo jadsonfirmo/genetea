@@ -1,8 +1,8 @@
 ## GeneTEA: Base de Dados sobre Genes Relacionados ao TEA
 
 ### Descrição
-GeneTEA é um site web que oferece uma base de dados sobre genes comumente associados ao Transtorno do Espectro Autista (TEA).
-O objetivo do projeto é fornecer uma plataforma para pesquisadores, profissionais da saúde e o público em geral acessarem informações relevantes sobre a genética do TEA.
+GeneTEA é um site web, desenvolvido durante a imersão alura/google gemini, que oferece uma base de dados sobre genes comumente associados ao Transtorno do Espectro Autista (TEA).
+O objetivo do projeto é fornecer uma plataforma para pesquisadores, profissionais da saúde e o público em geral, facilitando o acesso à informações relevantes sobre a genética do TEA.
 
 ### Funcionalidades
 * **Pesquisa de genes:** Permite aos usuários pesquisar por genes específicos ou características relacionadas ao TEA.
