@@ -12,7 +12,7 @@ body {
 	flex-direction: column; /* Organiza os itens em coluna */
 	align-items: center; /* Alinha os itens no centro horizontalmente */
 	justify-content: center; /* Alinha os itens no centro verticalmente */
-	height: 100%; /* Define a altura como 100% da altura da viewport */
+	height: 100vh; /* Define a altura como 100% da altura da viewport */
 	margin: 0; /* Remove a margem padrão */
 	padding: 0; /* Remove o padding padrão */
 	overflow-x: hidden; /* Oculta a rolagem horizontal */
@@ -24,10 +24,6 @@ body {
 	background-repeat: no-repeat; /* Não repete a imagem */
 	background-attachment: fixed; /* Faz com que a imagem de fundo fique fixa ao rolar a página */
 
-	/* Método 1: Ajustar o modo de mistura */
-	/* background-blend-mode: lighten; /* Faz a imagem se misturar suavemente com a cor de fundo */
-
-	/* Método 2: Adicionar um overlay com transparência */
 	/* Utiliza um pseudo-elemento para aplicar uma camada de cor semi-transparente */
 	position: relative; /* Necessário para o pseudo-elemento estar corretamente posicionado */
 }
@@ -44,18 +40,11 @@ body::before {
 	z-index: -1; /* Coloca o overlay atrás do conteúdo do body */
 }
 
-/* Adiciona um pouco de estilo ao conteúdo para garantir boa visibilidade */
-.container {
-	position: relative; /* Faz com que o texto e outros elementos se sobreponham ao fundo */
-	z-index: 1; /* Garante que o conteúdo fique sobre a imagem de fundo */
-}
-
 /* Estilos para as seções */
 section {
 	display: flex; /* Utiliza flexbox para o layout */
 	flex-direction: column; /* Organiza os itens em coluna */
 	align-items: center; /* Alinha os itens no centro horizontalmente */
-	margin-bottom: 3rem; /* Adiciona margem inferior */
 }
 
 /* Estilos para o campo de pesquisa */
@@ -116,7 +105,7 @@ section {
 /* Estilos para a seção de resultados */
 .resultado {
 	width: 60rem; /* Define a largura da seção de resultados */
-	height: 46vh; /* Define a altura como 46% da altura da viewport */
+	height: 45vh; /* Define a altura como 45% da altura da viewport */
 	color: #8b8b8b; /* Define a cor do texto */
 	margin-top: 1rem; /* Adiciona margem superior */
 	padding: 1rem; /* Adiciona padding interno */
@@ -152,7 +141,7 @@ footer {
 	text-align: center; /* Alinha o texto no centro */
 	width: 100%; /* Define a largura como 100% */
 	bottom: 0; /* Posiciona o rodapé na parte inferior */
-	position: sticky; /* Mantém o rodapé fixo na parte inferior da tela ao rolar */
+	position: fixed; /* Mantém o rodapé fixo na parte inferior da tela ao rolar */
 	font-size: 0.8rem; /* Define o tamanho da fonte */
 }
 
@@ -205,4 +194,73 @@ html {
 .scrollable-div {
 	scrollbar-width: thin; /* Define a largura da barra de rolagem como fina */
 	scrollbar-color: #888 #f1f1f1; /* Define a cor do polegar e da trilha da barra de rolagem */
+}
+
+/* ----------------------------- */
+/* Estilos aplicados para telas com largura máxima de 768px (tablets e dispositivos semelhantes) */
+@media (max-width: 768px) {
+	body {
+		font-size: 0.8rem; /* Define o tamanho da fonte como 0.8rem */
+		padding: 0.6rem; /* Define o padding interno do body */
+	}
+
+	header {
+		margin: 1rem; /* Adiciona uma margem de 1rem ao redor do header */
+	}
+
+	.campo-pesquisa {
+		height: 2.5rem; /* Define a altura do campo de pesquisa */
+		margin-bottom: 1.2rem; /* Adiciona uma margem inferior de 1.2rem */
+		padding: 1rem; /* Adiciona um padding interno de 1rem */
+	}
+
+	.campo-pesquisa::placeholder {
+		display: none; /* Oculta o placeholder (não recomendado, pois pode confundir o usuário) */
+	}
+
+	.resultado {
+		width: 90%; /* Define a largura da seção de resultados como 90% da largura do container */
+		height: 50vh; /* Define a altura da seção de resultados como 50% da altura da viewport */
+	}
+
+	.item_resultado {
+		width: 50%; /* Define a largura dos itens de resultado como 50% da largura do container */
+		margin-bottom: 1rem; /* Adiciona uma margem inferior de 1rem */
+	}
+}
+
+/* ----------------------------- */
+/* Estilos aplicados para telas com largura máxima de 480px (celulares e dispositivos muito pequenos) */
+@media (max-width: 480px) {
+	body {
+		font-size: 0.8rem; /* Define o tamanho da fonte como 0.8rem */
+		padding: 0.6rem; /* Define o padding interno do body */
+	}
+
+	header {
+		margin: 1rem; /* Adiciona uma margem de 1rem ao redor do header */
+	}
+
+	main {
+		width: 80%; /* Define a largura do main como 80% da largura do container */
+	}
+
+	.campo-pesquisa {
+		width: 100%; /* Define a largura do campo de pesquisa como 100% da largura do container */
+		height: 3rem; /* Define a altura do campo de pesquisa */
+	}
+
+	.campo-pesquisa::placeholder {
+		color: transparent; /* Define a cor do texto do placeholder como transparente */
+	}
+
+	.resultado {
+		width: 90%; /* Define a largura da seção de resultados como 90% da largura do container */
+		height: 50vh; /* Define a altura da seção de resultados como 50% da altura da viewport */
+	}
+
+	.item_resultado {
+		width: 80%; /* Define a largura dos itens de resultado como 80% da largura do container */
+		margin-bottom: 0.5rem; /* Adiciona uma margem inferior de 0.5rem */
+	}
 }

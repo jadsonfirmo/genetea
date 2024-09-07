@@ -11,64 +11,62 @@
 		<title>GeneTEA 🧩</title>
 		<!-- Link para o arquivo CSS externo que contém os estilos da página -->
 		<link rel="stylesheet" href="styles.css" />
-    <!-- Link para o arquivo .ico que será exibido na aba do navegador -->
-    <link rel="icon" href="favicon.ico">
+		<!-- Link para o arquivo .ico que será exibido na aba do navegador -->
+		<link rel="icon" href="favicon.ico" />
 	</head>
 	<body>
-		<!-- <div class="container"> -->
-			<header>
-				<!-- Título principal da página, incluindo emojis para adicionar um estilo visual -->
-				<h1>🧬 GeneTEA 🧩</h1>
-				<!-- Subtítulo com uma breve descrição do propósito do site -->
-				<h3>
-					Base de dados sobre os genes mais comuns relacionados ao TEA -
-					Transtorno do Espectro Autista
-				</h3>
-			</header>
-			<main>
-				<section class="pesquisa">
-					<input
-						id="campo-pesquisa"
-						type="text"
-						placeholder="Pesquise aqui o gene ou alguma característica desejada"
-						class="campo-pesquisa"
-						onkeypress="verificarEnter(event)"
-					/>
-					<div class="botoes">
-						<!-- Botão para acionar a função de pesquisa -->
-						<button
-							id="btn-pesquisar"
-							onclick="pesquisar()"
-							class="botao botao-pesquisar"
-						>
-							Pesquisar
-						</button>
-						<!-- Botão para limpar o campo de pesquisa e resultados -->
-						<button
-							id="btn-limpar-pesquisa"
-							onclick="limparPesquisa()"
-							class="botao botao-limpar"
-						>
-							Limpar
-						</button>
-					</div>
-				</section>
-				<!-- Seção para exibir os resultados da pesquisa, com rolagem habilitada se o conteúdo exceder o tamanho da área visível -->
-				<section
-					id="resultado"
-					class="resultado descricao_meta scrollable-div"
-				></section>
-			</main>
-			<!-- Rodapé com uma mensagem de direitos autorais -->
-			<footer>
-				<p class="texto-footer">
-					© 2024 - GeneTEA | Todos os direitos reservados.
-				</p>
-			</footer>
-			<!-- Link para o arquivo JavaScript que contém os dados para pesquisa -->
-			<script src="dados.js"></script>
-			<!-- Link para o arquivo JavaScript que contém a lógica da aplicação -->
-			<script src="app.js"></script>
-		<!-- </div> -->
+		<header>
+			<!-- Título principal da página, incluindo emojis para adicionar um estilo visual -->
+			<h1>🧬 GeneTEA 🧩</h1>
+			<!-- Subtítulo com uma breve descrição do propósito do site -->
+			<h3>
+				Base de dados sobre os genes mais comuns relacionados ao TEA -
+				Transtorno do Espectro Autista
+			</h3>
+		</header>
+		<main>
+			<section class="pesquisa">
+				<input
+					id="campo-pesquisa"
+					type="text"
+					placeholder="Pesquise aqui o gene ou alguma característica desejada"
+					class="campo-pesquisa"
+					onkeypress="verificarEnter(event)"
+				/>
+				<div class="botoes">
+					<!-- Botão para acionar a função de pesquisa -->
+					<button
+						id="btn-pesquisar"
+						onclick="pesquisar()"
+						class="botao botao-pesquisar"
+					>
+						Pesquisar
+					</button>
+					<!-- Botão para limpar o campo de pesquisa e resultados -->
+					<button
+						id="btn-limpar-pesquisa"
+						onclick="limparPesquisa()"
+						class="botao botao-limpar"
+					>
+						Limpar
+					</button>
+				</div>
+			</section>
+			<!-- Seção para exibir os resultados da pesquisa, com rolagem habilitada se o conteúdo exceder o tamanho da área visível -->
+			<section
+				id="resultado"
+				class="resultado scrollable-div"
+			></section>
+		</main>
+		<!-- Rodapé com uma mensagem de direitos autorais -->
+		<footer>
+			<p class="texto-footer">
+				© 2024 - GeneTEA | Todos os direitos reservados.
+			</p>
+		</footer>
+		<!-- Link para o arquivo JavaScript que contém os dados para pesquisa -->
+		<script src="dados.js"></script>
+		<!-- Link para o arquivo JavaScript que contém a lógica da aplicação -->
+		<script src="app.js"></script>
 	</body>
 </html>
