@@ -16,4 +16,7 @@ O objetivo do projeto é fornecer uma plataforma para pesquisadores, profissiona
 ### Como Usar
 1. **Clonar o repositório:**
    ```bash
-   git clone https://[seu-repositório-git]
+   git clone https://github.com/jadsonfirmo/genetea.git
+
+### Link para acesso
+[genetea](https://genetea.vercel.app/)
