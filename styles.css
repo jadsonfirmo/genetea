@@ -1,0 +1,208 @@
+/* Importa a fonte "Poppins" do Google Fonts com várias opções de peso e estilo */
+@import url("https://fonts.googleapis.com/css2?family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap");
+
+/* Estilos para o corpo da página */
+body {
+	font-family: "Poppins", sans-serif; /* Define a fonte padrão para o texto */
+	font-weight: normal; /* Define o peso da fonte como normal */
+	font-style: normal; /* Define o estilo da fonte como normal */
+	color: #8b8b8b; /* Define a cor do texto */
+	text-align: center; /* Alinha o texto no centro */
+	display: flex; /* Utiliza flexbox para o layout */
+	flex-direction: column; /* Organiza os itens em coluna */
+	align-items: center; /* Alinha os itens no centro horizontalmente */
+	justify-content: center; /* Alinha os itens no centro verticalmente */
+	height: 100%; /* Define a altura como 100% da altura da viewport */
+	margin: 0; /* Remove a margem padrão */
+	padding: 0; /* Remove o padding padrão */
+	overflow-x: hidden; /* Oculta a rolagem horizontal */
+
+	/* Adiciona a imagem de fundo como marca d'água */
+	background-image: url("dna.jpeg"); /* Caminho para a imagem de fundo - Fonte da imagem: https://encurtador.com.br/Hgmm0 */
+	background-size: cover; /* Ajusta o tamanho da imagem para cobrir toda a área do body */
+	background-position: center; /* Centraliza a imagem no fundo */
+	background-repeat: no-repeat; /* Não repete a imagem */
+	background-attachment: fixed; /* Faz com que a imagem de fundo fique fixa ao rolar a página */
+
+	/* Método 1: Ajustar o modo de mistura */
+	/* background-blend-mode: lighten; /* Faz a imagem se misturar suavemente com a cor de fundo */
+
+	/* Método 2: Adicionar um overlay com transparência */
+	/* Utiliza um pseudo-elemento para aplicar uma camada de cor semi-transparente */
+	position: relative; /* Necessário para o pseudo-elemento estar corretamente posicionado */
+}
+
+/* Pseudo-elemento para o overlay com transparência */
+body::before {
+	content: ""; /* Necessário para criar um pseudo-elemento */
+	position: absolute; /* Posiciona o pseudo-elemento absolutamente em relação ao body */
+	top: 0; /* Alinha o topo do pseudo-elemento com o topo do body */
+	left: 0; /* Alinha o lado esquerdo do pseudo-elemento com o lado esquerdo do body */
+	width: 100%; /* Faz com que o pseudo-elemento cubra toda a largura do body */
+	height: 100%; /* Faz com que o pseudo-elemento cubra toda a altura do body */
+	background: #000000bf; /* Cor selecionada com opacidade */
+	z-index: -1; /* Coloca o overlay atrás do conteúdo do body */
+}
+
+/* Adiciona um pouco de estilo ao conteúdo para garantir boa visibilidade */
+.container {
+	position: relative; /* Faz com que o texto e outros elementos se sobreponham ao fundo */
+	z-index: 1; /* Garante que o conteúdo fique sobre a imagem de fundo */
+}
+
+/* Estilos para as seções */
+section {
+	display: flex; /* Utiliza flexbox para o layout */
+	flex-direction: column; /* Organiza os itens em coluna */
+	align-items: center; /* Alinha os itens no centro horizontalmente */
+	margin-bottom: 3rem; /* Adiciona margem inferior */
+}
+
+/* Estilos para o campo de pesquisa */
+.campo-pesquisa {
+	flex-grow: 1; /* Faz o campo de pesquisa ocupar o espaço disponível */
+	border: none; /* Remove a borda padrão */
+	border-radius: 1.5rem; /* Define o raio da borda para arredondar os cantos */
+	color: #29206c; /* Define a cor do texto */
+	width: 35rem; /* Define a largura do campo de pesquisa */
+	height: 2.8rem; /* Define a altura do campo de pesquisa */
+	margin-bottom: 1.2rem; /* Adiciona margem inferior */
+	padding: 1rem; /* Adiciona padding interno */
+	box-sizing: border-box; /* Inclui o padding e a borda no cálculo da largura e altura */
+	font-size: 1rem; /* Define o tamanho da fonte */
+	text-align: center; /* Alinha o texto no centro */
+}
+
+/* Estilos para o placeholder do campo de pesquisa */
+.campo-pesquisa::placeholder {
+	color: #c9c8c8; /* Define a cor do texto do placeholder */
+}
+
+/* Estilos base para os botões */
+.botao {
+	border: 0.2rem solid; /* Define a borda dos botões */
+	border-radius: 1rem; /* Define o raio da borda para arredondar os cantos */
+	padding: 0.8rem 1.8rem; /* Adiciona padding interno */
+	margin-bottom: 0.5rem; /* Adiciona margem inferior */
+	font-size: 1rem; /* Define o tamanho da fonte */
+	cursor: pointer; /* Define o cursor como pointer para indicar que é clicável */
+	display: inline-block; /* Exibe o botão como bloco inline */
+}
+
+/* Estilos específicos para o botão de pesquisa */
+.botao-pesquisar {
+	background-color: #16c000; /* Define a cor de fundo */
+	color: #f5f7f8; /* Define a cor do texto */
+}
+
+/* Estilos para o botão de pesquisa ao passar o mouse */
+.botao-pesquisar:hover {
+	background-color: #159e02; /* Altera a cor de fundo ao passar o mouse */
+	box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2); /* Adiciona sombra ao botão */
+}
+
+/* Estilos específicos para o botão de limpar */
+.botao-limpar {
+	background-color: #f82323; /* Define a cor de fundo */
+	color: #f5f7f8; /* Define a cor do texto */
+}
+
+/* Estilos para o botão de limpar ao passar o mouse */
+.botao-limpar:hover {
+	background-color: #e61f1f; /* Altera a cor de fundo ao passar o mouse */
+	box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2); /* Adiciona sombra ao botão */
+}
+
+/* Estilos para a seção de resultados */
+.resultado {
+	width: 60rem; /* Define a largura da seção de resultados */
+	height: 46vh; /* Define a altura como 46% da altura da viewport */
+	color: #8b8b8b; /* Define a cor do texto */
+	margin-top: 1rem; /* Adiciona margem superior */
+	padding: 1rem; /* Adiciona padding interno */
+	border-radius: 0.6rem; /* Define o raio da borda para arredondar os cantos */
+	overflow-y: auto; /* Adiciona rolagem vertical se necessário */
+}
+
+/* Estilos para o nome do gene nos resultados */
+.nomeGeneResultado {
+	font-size: 1.6rem; /* Define o tamanho da fonte */
+	color: #8b8b8b; /* Define a cor do texto */
+	margin-top: 0rem; /* Remove a margem superior */
+	margin-bottom: 0.3rem; /* Adiciona margem inferior */
+}
+
+/* Estilos para cada item de resultado */
+.item_resultado {
+	width: 50rem; /* Define a largura do item de resultado */
+	background: #ffffff; /* Define a cor de fundo */
+	color: #29206c; /* Define a cor do texto */
+	border-radius: 0.5rem; /* Define o raio da borda para arredondar os cantos */
+	padding: 1rem 2rem; /* Adiciona padding interno */
+	margin-bottom: 1rem; /* Adiciona margem inferior */
+	box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1); /* Adiciona sombra ao item */
+	text-align: justify; /* Justifica o texto */
+}
+
+/* Estilos para o rodapé */
+footer {
+	background-color: #01213f; /* Define a cor de fundo */
+	color: #ffffff; /* Define a cor do texto */
+	padding: 0; /* Remove o padding */
+	text-align: center; /* Alinha o texto no centro */
+	width: 100%; /* Define a largura como 100% */
+	bottom: 0; /* Posiciona o rodapé na parte inferior */
+	position: sticky; /* Mantém o rodapé fixo na parte inferior da tela ao rolar */
+	font-size: 0.8rem; /* Define o tamanho da fonte */
+}
+
+/* Estilos para o texto do rodapé */
+.texto-footer {
+	margin: 0.3rem 0rem; /* Adiciona margem superior e inferior */
+}
+
+/* Personalização da barra de rolagem para navegadores WebKit (Chrome, Safari) */
+::-webkit-scrollbar {
+	width: 12px; /* Define a largura da barra de rolagem */
+}
+
+::-webkit-scrollbar-track {
+	background: #f1f1f1; /* Define a cor de fundo da trilha da barra de rolagem */
+}
+
+::-webkit-scrollbar-thumb {
+	background: #888; /* Define a cor do polegar da barra de rolagem */
+}
+
+::-webkit-scrollbar-thumb:hover {
+	background: #555; /* Altera a cor do polegar ao passar o mouse */
+}
+
+/* Personalização da barra de rolagem para Firefox */
+html {
+	scrollbar-width: thin; /* Define a largura da barra de rolagem como fina */
+	scrollbar-color: #888 #f1f1f1; /* Define a cor do polegar e da trilha da barra de rolagem */
+}
+
+/* Personalização da barra de rolagem dentro de uma div específica para navegadores WebKit */
+.scrollable-div::-webkit-scrollbar {
+	width: 12px; /* Define a largura da barra de rolagem */
+}
+
+.scrollable-div::-webkit-scrollbar-track {
+	background: #f1f1f1; /* Define a cor de fundo da trilha da barra de rolagem */
+}
+
+.scrollable-div::-webkit-scrollbar-thumb {
+	background: #888; /* Define a cor do polegar da barra de rolagem */
+}
+
+.scrollable-div::-webkit-scrollbar-thumb:hover {
+	background: #555; /* Altera a cor do polegar ao passar o mouse */
+}
+
+/* Personalização da barra de rolagem dentro de uma div específica para Firefox */
+.scrollable-div {
+	scrollbar-width: thin; /* Define a largura da barra de rolagem como fina */
+	scrollbar-color: #888 #f1f1f1; /* Define a cor do polegar e da trilha da barra de rolagem */
+}
